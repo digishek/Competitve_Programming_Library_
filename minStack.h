@@ -6,13 +6,13 @@
 #ifndef COMPETITVE_PROGRAMMING_LIBRARY__MINSTACK_H
 #define COMPETITVE_PROGRAMMING_LIBRARY__MINSTACK_H
 
-class<T>
+template<class T>
 class minStack {
-    stack<pair<T,T>> st;
+    std::stack<std::pair<T,T>> st;
     void push(const T& value){
         T mn = value ;
-        if(!st.empty()) mn =min(mn , T.top().second) ;
-        st.push({T ,mn}) ;
+        if(!st.empty()) mn =min(mn , st.top().second) ;
+        st.push({value ,mn}) ;
     }
     T findMin(){
         return st.top().second ;
