@@ -9,6 +9,7 @@
 template<class T>
 class minStack {
     std::stack<std::pair<T,T>> st;
+public:
     void push(const T& value){
         T mn = value ;
         if(!st.empty()) mn =min(mn , st.top().second) ;

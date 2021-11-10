@@ -9,6 +9,7 @@
 template<class T>
 class minQueue {
     std::stack<pair<T,T>> s1,s2 ;
+public:
     void push(T value ){
         T mn = value ;
         if(!s1.empty()) mn= min(mn , s1.top()) ;
